@@ -1,0 +1,30 @@
+
+/* 
+    Styles for main page
+
+    Author     : Kyle
+*/
+
+#TitleOfPage{
+    height: 175px;
+    width: 1400px;
+    background-color: #7D0101;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding-top: 7px;
+}
+
+Body{
+    background-image: url("pageBG.jpg");
+}
+
+#TitleOfPageTextTable{
+    height: 161px;
+    width: 1386px; 
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E6E6E6;
+    border-radius: 15px;
+}
