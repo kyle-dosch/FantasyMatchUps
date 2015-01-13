@@ -38,17 +38,17 @@
             //Creates node containing a row in the table
             $row = $table->getElementsByTagName('tr')->item(0);
 
-            //Creates node refering to columns in the row node, gets unique ID
-            $pId = $row->getElementsByTagName('td')->item(0)->textContent;
-            $pName = $row->getElementsByTagName('td')->item(1)->textContent;
-            $pTeam = $row->getElementsByTagName('td')->item(2)->textContent;
-            $pRbd = $row->getElementsByTagName('td')->item(3)->textContent;
-            $pAst = $row->getElementsByTagName('td')->item(4)->textContent;
-            $pStl = $row->getElementsByTagName('td')->item(5)->textContent;
-            $pBlk = $row->getElementsByTagName('td')->item(6)->textContent;
-            $pTo = $row->getElementsByTagName('td')->item(7)->textContent;
-            $pPts = $row->getElementsByTagName('td')->item(8)->textContent;
-            $pScore = $row->getElementsByTagName('td')->item(9)->textContent;
+                            
+                $pId = $row->getElementsByTagName('td')->item(0)->textContent;
+                $pName = $row->getElementsByTagName('td')->item(1)->textContent;
+                $pTeam = $row->getElementsByTagName('td')->item(2)->textContent;
+                $pRbd = $row->getElementsByTagName('td')->item(3)->textContent;
+                $pAst = $row->getElementsByTagName('td')->item(4)->textContent;
+                $pStl = $row->getElementsByTagName('td')->item(5)->textContent;
+                $pBlk = $row->getElementsByTagName('td')->item(6)->textContent;
+                $pTo = $row->getElementsByTagName('td')->item(7)->textContent;
+                $pPts = $row->getElementsByTagName('td')->item(8)->textContent;
+                $pScore = $row->getElementsByTagName('td')->item(9)->textContent;
             
             
        
