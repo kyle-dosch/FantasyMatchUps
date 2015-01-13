@@ -53,7 +53,7 @@
                 $pTo = $row->getElementsByTagName('td')->item(8)->textContent;
                 $pPts = $row->getElementsByTagName('td')->item(9)->textContent;
                 
-                $stats.fillVars();
+                $stats.fillVars($pRnk,$pName,$pPos,$pTeam,$pRbd,$pAst,$pStl,$pBlk,$pTo,$pPts);
                 
                 $row = $table->getElementsByTagName('tr')->item(i);
             }
