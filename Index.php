@@ -40,7 +40,6 @@
             
             $stats = new StatsShell();
             
-            
             for ($i = 1; $i < $row->length; $i++){  
                  
                 $pRnk = $row->getElementsByTagName('td')->item(0)->textContent;
@@ -53,6 +52,8 @@
                 $pBlk = $row->getElementsByTagName('td')->item(7)->textContent;
                 $pTo = $row->getElementsByTagName('td')->item(8)->textContent;
                 $pPts = $row->getElementsByTagName('td')->item(9)->textContent;
+                
+                $stats.fillVars();
                 
                 $row = $table->getElementsByTagName('tr')->item(i);
             }
