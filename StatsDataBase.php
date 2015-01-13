@@ -15,7 +15,7 @@
 class StatsDataBase {
     
     protected $statsDBName = "myStatsDB";
-    protected $conn = null;
+    public $conn = null;
     protected $serverName = '';
     protected $userName = '';
     protected $password = '';
@@ -40,7 +40,7 @@ class StatsDataBase {
         
        $this->makeConn();
         
-       $statsDB = "CREATE DB ".$this->statsDBName;
+       statsDB = "CREATE DB ".$this->statsDBName;
        if ($this->conn->query($statsDB) !== TRUE){
            echo "Error creating database with connection";
        }
@@ -48,10 +48,13 @@ class StatsDataBase {
        $this->dbNew = false;
        $this->makeConn();
         
+       $this->makeTables();
     }
     
     protected function makeTables(){
-        $PlyrsTbl = "CREATE TABLE Players(
+        
+        if (conn->query("SHOW TABLES LIKE 'Players'")->num_rows==0){
+           $PlyrsTbl = "CREATE TABLE Players(
                 id INT(6) PRIMARY KEY,
                 name VARCHAR(40) NOT NULL,
                 team VARCHAR(6),
@@ -60,16 +63,19 @@ class StatsDataBase {
                 assists DECIMAL(4,2),
                 blocks DECIMAL(4,2),
                 steals DECIMAL(4,2),
-                )";
+                )"; 
+        } 
     }
     
-    public function DBLife(){
+    public function DBLife($server,$user,$pass){
+        $this->serverName = $server;
+        $this->userName = $user;
+        $this->password = $pass;
         
+        makeDataBase();
     }
     
     public function DBshutDown(){
         $this->conn.close();
     }
-    
-    
 }
