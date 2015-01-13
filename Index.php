@@ -37,7 +37,10 @@
 
             //Creates node containing a row in the table
             $row = $table->getElementsByTagName('tr')->item(0);
-
+            
+            $stats = new StatsShell();
+            
+            
             for ($i = 1; $i < $row->length; $i++){  
                  
                 $pRnk = $row->getElementsByTagName('td')->item(0)->textContent;
