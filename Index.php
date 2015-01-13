@@ -40,6 +40,9 @@
             
             $stats = new StatsShell();
             
+            $db = new StatsDataBase();
+            $db->dbLife('server','user','pass');
+            
             for ($i = 1; $i < $row->length; $i++){  
                  
                 $pRnk = $row->getElementsByTagName('td')->item(0)->textContent;
@@ -54,6 +57,7 @@
                 $pPts = $row->getElementsByTagName('td')->item(9)->textContent;
                 
                 $stats.fillVars($pRnk,$pName,$pPos,$pTeam,$pRbd,$pAst,$pStl,$pBlk,$pTo,$pPts);
+                $stats.insertRow($db);
                 
                 $row = $table->getElementsByTagName('tr')->item(i);
             }
