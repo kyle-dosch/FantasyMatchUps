@@ -55,5 +55,20 @@ class StatsShell {
         
         return $score;
     }
+    
+    public insertRow(){
+        
+       $insertSQL = "INSERT INTO Players "
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
             
 }
