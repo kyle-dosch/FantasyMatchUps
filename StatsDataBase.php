@@ -55,8 +55,10 @@ class StatsDataBase {
         
         if (conn->query("SHOW TABLES LIKE 'Players'")->num_rows==0){
            $PlyrsTbl = "CREATE TABLE Players(
-                id INT(6) PRIMARY KEY,
+                pID INT IDENTITY(1,1) PRIMARY KEY,
+                rank INT(6) PRIMARY KEY,
                 name VARCHAR(40) NOT NULL,
+                position VARCHAR(10),
                 team VARCHAR(6),
                 score DECIMAL(4,2),
                 points DECIMAL(4,2),
