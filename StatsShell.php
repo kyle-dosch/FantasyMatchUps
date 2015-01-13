@@ -20,7 +20,7 @@ class StatsShell {
     public $playerPoints = 0;
     public $PlayerValue = 0;
     
-    public function fillVars($pRnk,$pName,$pPos,$pTeam,$pRbd,$pAst,$pStl,$pBlk,$pTO,$pPts,$score){
+    public function fillVars($pRnk,$pName,$pPos,$pTeam,$pRbd,$pAst,$pStl,$pBlk,$pTO,$pPts){
       
         $this->playerRank = $pRnk;
         $this->playerAsts = $pAst;
