@@ -56,14 +56,16 @@ class StatsShell {
         return $score;
     }
     
-    public insertRow(){
+    public insertRow($db){
         
        $insertSQL = "INSERT INTO Players (rank, name, position, team, score, points, rebounds, assists, blocks, steals)
                      VALUE ('"+$this->playerRank+"', '"+$this->playerName+"', '"+$this->playerPos+"', '"+$this->playerTeam
                             +"', '"+$this->PlayerValue+"', '"+$this->playerPoints+"', '"+$this->playerRebounds
                             +"', '"+$this->playerAsts+"', '"+$this->playerBlocks+"', '"+$this->playerSteals+"')";
         
-        
+        $db->makeDBConn;
+        $db->conn->query(insertSQL);
+        $db->DBshutDown;
         
     }
             
