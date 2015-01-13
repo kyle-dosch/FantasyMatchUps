@@ -24,7 +24,7 @@ class StatsDataBase {
     protected function makeConn(){
         
         if($this->dbNew == true){
-            $this->conn = mysqli_connect_($this->serverName,$this->userName,$this->password);
+            $this->conn = new mysqli($this->serverName,$this->userName,$this->password);
             if ($this->conn->connect_error){
                 die("Connection failed: ".$this->conn->connect_error);
             }
