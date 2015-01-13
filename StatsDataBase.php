@@ -23,6 +23,7 @@ class StatsDataBase {
     
     protected function makeConn(){
         
+        //Makes connection with server or with server and database (If database has already been creaed)
         if($this->dbNew == true){
             $this->conn = new mysqli($this->serverName,$this->userName,$this->password);
             if ($this->conn->connect_error){
@@ -53,6 +54,7 @@ class StatsDataBase {
     
     protected function makeTables(){
         
+        //If table already exists in the database then code is skipped
         if (conn->query("SHOW TABLES LIKE 'Players'")->num_rows==0){
            $PlyrsTbl = "CREATE TABLE Players(
                 pID INT IDENTITY(1,1) PRIMARY KEY,
@@ -75,10 +77,20 @@ class StatsDataBase {
         $this->userName = $user;
         $this->password = $pass;
         
-        makeDataBase();
+        $this->makeDataBase();
+        
+        $this->DBshutDown();
     }
     
-    public function DBshutDown(){
+    public makeDBConn(){
+      $this->conn = new mysqli($this->serverName,$this->userName,$this->password,$this->statsDBName);
+      
+      if ($this->conn->connect_error){
+        die("Connection failed w/ existing DB: ".$this->conn->connect_error);
+      }
+    }
+    
+    protected function DBshutDown(){
         $this->conn.close();
     }
 }
