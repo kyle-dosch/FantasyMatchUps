@@ -8,8 +8,9 @@
  */
 class StatsShell {
     
-    public $playerId = 0;
+    public $playerRank = 0;
     public $playerName = '';
+    public $playerPos = '';
     public $playerTeam = '';
     public $playerRebounds = 0;
     public $playerAsts = 0;
@@ -19,9 +20,9 @@ class StatsShell {
     public $playerPoints = 0;
     public $PlayerValue = 0;
     
-    public function fillVars($pId,$pName,$pTeam,$pRbd,$pAst,$pStl,$pBlk,$pTO,$pPts,$score){
+    public function fillVars($pRnk,$pName,$pPos,$pTeam,$pRbd,$pAst,$pStl,$pBlk,$pTO,$pPts,$score){
       
-        $this->playerId = $pId;
+        $this->playerRank = $pRnk;
         $this->playerAsts = $pAst;
         $this->playerBlocks = $pBlk;
         $this->playerName = $pName;
@@ -30,6 +31,7 @@ class StatsShell {
         $this->playerSteals = $pStl;
         $this->playerPoints = $pPts;
         $this->playerTurnOvers = $pTO;
+        $this->playerPos = $pPos;
         
         $this->PlayerValue = $this->calcPlayerValue();
     }
