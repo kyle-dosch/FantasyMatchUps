@@ -58,6 +58,7 @@ class StatsDataBase {
                 id INT(6) PRIMARY KEY,
                 name VARCHAR(40) NOT NULL,
                 team VARCHAR(6),
+                score DECIMAL(4,2),
                 points DECIMAL(4,2),
                 rebounds DECIMAL(4,2),
                 assists DECIMAL(4,2),
