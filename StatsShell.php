@@ -58,14 +58,10 @@ class StatsShell {
     
     public insertRow(){
         
-       $insertSQL = "INSERT INTO Players "
-        
-        
-        
-        
-        
-        
-        
+       $insertSQL = "INSERT INTO Players (rank, name, position, team, score, points, rebounds, assists, blocks, steals)
+                     VALUE ('"+$this->playerRank+"', '"+$this->playerName+"', '"+$this->playerPos+"', '"+$this->playerTeam
+                            +"', '"+$this->PlayerValue+"', '"+$this->playerPoints+"', '"+$this->playerRebounds
+                            +"', '"+$this->playerAsts+"', '"+$this->playerBlocks+"', '"+$this->playerSteals+"')";
         
         
         
