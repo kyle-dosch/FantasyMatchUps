@@ -38,7 +38,8 @@
             //Creates node containing a row in the table
             $row = $table->getElementsByTagName('tr')->item(0);
 
-                            
+            for ($i = 1; $i < $row->length; $i++){  
+                 
                 $pId = $row->getElementsByTagName('td')->item(0)->textContent;
                 $pName = $row->getElementsByTagName('td')->item(1)->textContent;
                 $pTeam = $row->getElementsByTagName('td')->item(2)->textContent;
@@ -49,7 +50,9 @@
                 $pTo = $row->getElementsByTagName('td')->item(7)->textContent;
                 $pPts = $row->getElementsByTagName('td')->item(8)->textContent;
                 $pScore = $row->getElementsByTagName('td')->item(9)->textContent;
-            
+                
+                $row = $table->getElementsByTagName('tr')->item(i);
+            }
             
        
         ?>
