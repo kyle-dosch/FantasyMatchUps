@@ -1,6 +1,6 @@
 <?php
 
-class teamStatShell(){
+class TeamStatShell(){
   
   public $teamRank = 0;
   public $teamName = '';
