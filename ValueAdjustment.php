@@ -60,7 +60,8 @@ class ValueAdjustment(){
      *      (31)-(+3.0)
      *      (32)-(+3.2)
     */
-    
+     
+     $this->players
     
   }   
     
