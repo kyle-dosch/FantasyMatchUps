@@ -70,6 +70,12 @@ class StatsDataBase {
                 steals DECIMAL(4,2),
                 )"; 
         } 
+        
+        //Table for Defensive Team Stats
+        
+        
+        //Table for final fantasy values for offensive players
+        
     }
     
     public function DBLife($server,$user,$pass){
